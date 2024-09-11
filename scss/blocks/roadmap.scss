@@ -1,0 +1,26 @@
+.roadmap {
+	&__item {
+    display: flex;
+    align-items: center;
+    gap: $g100;
+    padding-bottom: 120px;
+  }
+
+	&__description {
+		max-width: 480px;
+	}
+
+	&__title {
+		font-size: $fs40;
+    font-weight: $fw700;
+    line-height: $lh48;
+    padding-bottom: 30px;
+	}
+
+	&__text {
+   font-size: $fs18;
+   line-height: $lh140;
+   color: $gray;
+	}
+
+}

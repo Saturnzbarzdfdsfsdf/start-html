@@ -1,0 +1,139 @@
+.pricing {
+	position: relative;
+	padding-top: 200px;
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		right: 0;
+		top: -20px;
+		width: 100%;
+		height: 100%;
+
+		background: $pink;
+		clip-path: polygon(0 30%, 100% 0%, 100% 100%, 0% 100%);
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+
+		background: $bg-dark-blue;
+		clip-path: polygon(0 30%, 100% 0%, 100% 100%, 0% 100%);
+	}
+	
+	&__description {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding-bottom: 80px;
+	}
+
+	&__title {
+		color: $white;
+		line-height: $lh48;
+		font-weight: $fw700;
+		padding-bottom: 30px;
+		font-size: $fs40;
+	}
+	&__text {
+		text-align: center;
+		font-size: $fs18;
+		line-height: $lh140;
+	}
+}
+
+.pricing__cards {
+	display: flex;
+	gap: 80px;
+	padding-bottom: 100px;
+	
+}
+.pricing__card {
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	width: 340px;
+	height: 440px;
+	border-radius: 30px;
+	box-shadow: 0px 18px 50px -15px rgb(6, 15, 40);
+	background: rgb(15, 31, 75);
+	// background-color: $white;
+	// opacity: 0.7;
+
+	&-title {
+		font-weight: $fw700;
+		font-size: $fs30;
+		color: $white;
+		padding-bottom: 10px;
+		line-height: 35px;
+	}
+	&-text {
+		position: relative;
+		text-align: center;
+		font-size: $fs18;
+		padding-bottom: 10px;
+		line-height: $lh140;
+		padding-bottom: 65px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 220px;
+			height: 1px;
+			// background: rgb(211, 217, 233);
+			background: rgb(42, 64, 124);
+
+			left: 50%;
+			top: 60%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&-price {
+		font-weight: $fw700;
+		color: $white;
+		font-size: $fs60;
+
+		span {
+			font-size: $fs30;
+		}
+	}
+	&-subtitle {
+		text-align: center;
+		font-size: $fs16;
+		line-height: $lh140;
+		padding-bottom: 40px;
+	}
+	&-btn {
+		font-size: $fs18;
+		@include btn(rgb(42, 64, 124), transparent, 68px, $white, 15px, 15px, 70px);
+	}
+}
+
+.active {
+	background: $white;
+	.pricing__card {
+		&-title {
+			color: $bg-dark-blue;
+		}
+		&-price {
+			color: $bg-dark-blue;
+		}
+		&-btn {
+			@include btn(transparent, $pink, 60px, $white, 15px, 15px, 70px);
+		}
+    &-text {
+      &::before {
+        background: rgb(211, 217, 233);
+      }
+    }
+	}
+}
