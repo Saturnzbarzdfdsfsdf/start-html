@@ -1,11 +1,12 @@
 // colors
 
-$black: #000;
-$white: #fff;
-$gray: #8794ba;
-$pink: #ef2a82;
-$light-gray: #f8f9ff;
-$bg-dark-blue: #172755;
+$textColor: rgb(30, 30, 30);
+$accentColor: rgb(229, 132, 17);
+
+$headerGrayColor: rgb(255, 255, 255);
+
+$textProductTitle: rgb(13, 27, 57);
+$textProductSubtitle: rgb(141, 141, 141);
 
 
 // gap
@@ -26,11 +27,14 @@ $fs60: 60px;
 
 // line height 
 
-$lh120: 120%;
-$lh140: 140%;
-$lh48: 48px;
+$lh185: 185%;
 
 
 // font-weight
 
 $fw700:700;
+$fw400:400;
+
+// font-family
+
+$fontPoppins: 'Poppins', sans-serif
